@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t6u-rZ-9xd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DQp-Wl-wOu">
+            <objects>
+                <viewController id="t6u-rZ-9xd" customClass="ViewController" customModule="BarcodeScannerSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EU2-Kd-Lf1"/>
+                        <viewControllerLayoutGuide type="bottom" id="vsd-LP-wUm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cej-i4-12n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgo-yu-mXB">
+                                <rect key="frame" x="12.5" y="108.5" width="350" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="EKu-ik-U53"/>
+                                    <constraint firstAttribute="width" constant="350" id="YeP-YC-EB9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvI-ai-FZ9">
+                                <rect key="frame" x="12.5" y="11" width="350" height="445"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.018318351409999999" blue="0.15975175750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-9l-dz5" userLabel="ReaderLine View">
+                                <rect key="frame" x="12.5" y="232.5" width="350" height="2"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="hhc-qz-RYY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Qgo-yu-mXB" firstAttribute="centerY" secondItem="cej-i4-12n" secondAttribute="centerY" constant="-100" id="3eH-2F-RId"/>
+                            <constraint firstItem="MvI-ai-FZ9" firstAttribute="centerX" secondItem="cej-i4-12n" secondAttribute="centerX" id="7WN-VY-O0R"/>
+                            <constraint firstItem="NBV-9l-dz5" firstAttribute="centerX" secondItem="Qgo-yu-mXB" secondAttribute="centerX" id="DpA-8t-dFE"/>
+                            <constraint firstItem="Qgo-yu-mXB" firstAttribute="centerX" secondItem="cej-i4-12n" secondAttribute="centerX" id="WKt-dq-H78"/>
+                            <constraint firstItem="NBV-9l-dz5" firstAttribute="centerY" secondItem="Qgo-yu-mXB" secondAttribute="centerY" id="ZRp-IA-eva"/>
+                            <constraint firstItem="NBV-9l-dz5" firstAttribute="width" secondItem="Qgo-yu-mXB" secondAttribute="width" id="dmI-m6-L79"/>
+                            <constraint firstItem="MvI-ai-FZ9" firstAttribute="height" secondItem="cej-i4-12n" secondAttribute="height" multiplier="2/3" id="kUl-tY-Izx"/>
+                            <constraint firstItem="MvI-ai-FZ9" firstAttribute="centerY" secondItem="Qgo-yu-mXB" secondAttribute="centerY" id="mg4-5f-SUZ"/>
+                            <constraint firstItem="MvI-ai-FZ9" firstAttribute="width" secondItem="Qgo-yu-mXB" secondAttribute="width" id="nlf-sl-j7e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="readerLineView" destination="NBV-9l-dz5" id="kou-dd-wYL"/>
+                        <outlet property="resultLabel" destination="MvI-ai-FZ9" id="g6K-SC-BGH"/>
+                        <outlet property="scanView" destination="Qgo-yu-mXB" id="OWS-DH-SoK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ik-HT-pJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-235"/>
+        </scene>
+    </scenes>
+</document>
